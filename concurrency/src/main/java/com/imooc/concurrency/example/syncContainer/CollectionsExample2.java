@@ -43,7 +43,7 @@ public class CollectionsExample2 {
         }
         countDownLatch.await();
         executorService.shutdown();
-        log.info("size{}",set.size());
+        log.info("size:{}",set.size());
     }
     private static void update(int i){
         set.add(i);

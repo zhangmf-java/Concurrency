@@ -41,7 +41,7 @@ public class CollectionsExample3 {
         }
         countDownLatch.await();
         executorService.shutdown();
-        log.info("size{}",map.size());
+        log.info("size:{}",map.size());
     }
     private static void update(int i){
         map.put(i,i);

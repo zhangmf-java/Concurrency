@@ -1,4 +1,4 @@
-package com.imooc.concurrency.example.syncContainer;
+package com.imooc.concurrency.example.concurrent;
 
 import com.imooc.concurrency.annotations.NotThreadSafe;
 import com.imooc.concurrency.annotations.ThreadSafe;
@@ -6,22 +6,18 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.*;
 
 @Slf4j
 @ThreadSafe
-public class VectorExample1 {
+public class CopyOnWriteArrayListExample {
     //请求总数
     public static int clientTotal = 5000;
 
     //允许并发执行的线程数
     private static int threadTotal = 200;
 
-    private static List<Integer> list = new Vector<>();
+    private static List<Integer> list = new CopyOnWriteArrayList<>();
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
