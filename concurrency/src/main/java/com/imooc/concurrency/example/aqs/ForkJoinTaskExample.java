@@ -36,7 +36,7 @@ public class ForkJoinTaskExample extends RecursiveTask<Integer> {
              //如果任务大于阈值，就分裂成两个任务计算
              int middle = (start + end) / 2;
              ForkJoinTaskExample leftTask = new ForkJoinTaskExample(start, middle);
-             ForkJoinTaskExample rightTask = new ForkJoinTaskExample(middle, end);
+             ForkJoinTaskExample rightTask = new ForkJoinTaskExample(middle + 1, end);
 
              //执行子任务
              leftTask.fork();
