@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 创建一个可缓存的线程池，如果线程池超过处理的需要，可以灵活回收空闲线程
+ */
 @Slf4j
 public class ThreadPoolExample1 {
     public static void main(String[] args) {

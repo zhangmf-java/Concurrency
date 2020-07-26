@@ -12,6 +12,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 创建一个定长的线程池，支持定时或者周期性任务执行
+ */
 @Slf4j
 public class ThreadPoolExample4 {
     public static void main(String[] args) {
